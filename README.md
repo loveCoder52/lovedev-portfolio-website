@@ -14,7 +14,7 @@
 
 ## 📌 About
 
-Personal portfolio website of **Love Sharma** — a Full Stack Developer and BCA student at Makhan Lal Chaturvedi National University (2027). Built to showcase projects, skills, experience, and a working contact form.
+**Love Sharma** — a Full Stack Developer and BCA student at Makhan Lal Chaturvedi National University (2027). Built to showcase projects, skills, experience, and a working contact form.
 
 ---
 
@@ -149,9 +149,9 @@ To deploy your own copy:
 
 **Love Sharma**
 
-- 📧 Email: [love.sharma@example.com](mailto:love.sharma@example.com)
-- 💼 LinkedIn: [linkedin.com/in/lovesharma](https://linkedin.com/in/lovesharma)
-- 🐙 GitHub: [github.com/lovesharma](https://github.com/lovesharma)
+- 📧 Email: [love.sharma@example.com](mailto:love.sharma.engineer@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/lovesharma](https://linkedin.com/in/love-sharma-dev)
+- 🐙 GitHub: [github.com/lovesharma](https://github.com/loveCoder52)
 - 🌐 Portfolio: [portfolio-lovesharma.vercel.app](https://portfolio-lovesharma.vercel.app)
 
 ---
@@ -164,7 +164,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 <div align="center">
 
-Made with ❤️ by [Love Sharma](https://github.com/lovesharma)
+Made with ❤️ by [Love Sharma](https://github.com/loveCoder52)
 
 ⭐ Star this repo if you found it helpful!
 

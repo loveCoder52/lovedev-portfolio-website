@@ -149,9 +149,9 @@ To deploy your own copy:
 
 **Love Sharma**
 
-- 📧 Email: [love.sharma@example.com](mailto:love.sharma.engineer@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/lovesharma](https://linkedin.com/in/love-sharma-dev)
-- 🐙 GitHub: [github.com/lovesharma](https://github.com/loveCoder52)
+- 📧 Email: [love.sharma.engineer@gmail.com](mailto:love.sharma.engineer@gmail.com)
+- 💼 LinkedIn: [https://linkedin.com/in/love-sharma-dev](https://linkedin.com/in/love-sharma-dev)
+- 🐙 GitHub: [https://github.com/loveCoder52](https://github.com/loveCoder52)
 - 🌐 Portfolio: [portfolio-lovesharma.vercel.app](https://portfolio-lovesharma.vercel.app)
 
 ---

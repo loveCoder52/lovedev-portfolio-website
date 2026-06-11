@@ -730,9 +730,9 @@ export default function Portfolio() {
 
               <div className="space-y-6">
                 {[
-                  { icon: "mail", color: "bg-blue-500/10", iconColor: "text-blue-400", label: "Email", value: "love.sharma@example.com" },
-                  { icon: "github", color: "bg-purple-500/10", iconColor: "text-purple-400", label: "GitHub", value: "github.com/lovesharma" },
-                  { icon: "linkedin", color: "bg-blue-500/10", iconColor: "text-blue-400", label: "LinkedIn", value: "linkedin.com/in/lovesharma" },
+                  { icon: "mail", color: "bg-blue-500/10", iconColor: "text-blue-400", label: "Email", value: "love.sharma.engineer@gmail.com" },
+                  { icon: "github", color: "bg-purple-500/10", iconColor: "text-purple-400", label: "GitHub", value: "https://github.com/loveCoder52" },
+                  { icon: "linkedin", color: "bg-blue-500/10", iconColor: "text-blue-400", label: "LinkedIn", value: "https://linkedin.com/in/love-sharma-dev" },
                   { icon: "map-pin", color: "bg-pink-500/10", iconColor: "text-pink-400", label: "Location", value: "India" },
                 ].map(({ icon, color, iconColor, label, value }) => (
                   <div key={label} className="glass rounded-2xl p-6 card-hover flex items-center gap-4 reveal">

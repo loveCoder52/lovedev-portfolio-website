@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-// ── EmailJS config (set in .env) ─────────────────────────────────────────────
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID 
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+console.log(import.meta.env);
+console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
+console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 // ── Icons ────────────────────────────────────────────────────────────────────
 const Icon = ({ name, className = "w-5 h-5" }) => {
@@ -399,7 +403,7 @@ export default function Portfolio() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold animate-in d2 leading-tight">
                 <span className="gradient-text">Love Sharma</span>
               </h1>
-              
+
               <div className="animate-in d3">
                 <p className="text-base sm:text-lg text-gray-400 font-mono inline-block"
                   style={{
@@ -474,7 +478,7 @@ export default function Portfolio() {
                 </span>
                 <span className="flex items-center gap-1 min-w-0">
                   <Icon name="mail" className="w-3 h-3 flex-shrink-0" />
-                  <span className="truncate">love.sharma@example.com</span>
+                  <span className="truncate">love.sharma.engineer@gmail.com</span>
                 </span>
               </div>
             </div>

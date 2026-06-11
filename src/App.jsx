@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
@@ -439,13 +439,12 @@ export default function Portfolio() {
                   <Icon name="mail" className="w-4 h-4" /> Contact Me
                 </button>
                 <a
-                  href="/Love_Sharma_Resume.pdf"
+                  href="/portfolio_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Love_Sharma_Resume.pdf"
-                  className="px-5 py-2.5 glass rounded-lg font-medium hover:bg-white/10 transition flex items-center gap-2 btn-ripple text-sm"
                 >
-                  <Icon name="download" className="w-4 h-4" /> Resume
+                  Resume
                 </a>
               </div>
 

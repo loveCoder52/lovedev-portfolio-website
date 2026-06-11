@@ -152,7 +152,7 @@ To deploy your own copy:
 - 📧 Email: [love.sharma.engineer@gmail.com](mailto:love.sharma.engineer@gmail.com)
 - 💼 LinkedIn: [https://linkedin.com/in/love-sharma-dev](https://linkedin.com/in/love-sharma-dev)
 - 🐙 GitHub: [https://github.com/loveCoder52](https://github.com/loveCoder52)
-- 🌐 Portfolio: [portfolio-lovesharma.vercel.app](https://portfolio-lovesharma.vercel.app)
+- 🌐 Portfolio: [https://lovedev-portfolio-website.vercel.app/](https://lovedev-portfolio-website.vercel.app/)
 
 ---
 

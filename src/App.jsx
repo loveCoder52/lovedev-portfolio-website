@@ -277,14 +277,19 @@ export default function Portfolio() {
           10%  { opacity:1 } 90% { opacity:1 }
           100% { transform:translateY(-200px) translateX(50px); opacity:0 }
         }
-        @keyframes typing { from{width:0} to{width:100%} }
-        @keyframes blink  { 50%{border-color:transparent} }
-        .typing-effect {
-          overflow:hidden; white-space:nowrap;
-          border-right:2px solid #a78bfa;
-          animation:typing 3s steps(40) 1s forwards, blink 0.7s step-end infinite;
-          width:0;
-        }
+        // @keyframes typing { from{width:0} to{width:100%} }
+        // @keyframes blink  { 50%{border-color:transparent} }
+
+        /* Remove .typing-effect class completely */
+/* Keep only these keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 43ch }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+    
         @keyframes fadeInUp {
           from{opacity:0;transform:translateY(30px)}
           to  {opacity:1;transform:translateY(0)}
@@ -374,9 +379,12 @@ export default function Portfolio() {
       <main className="relative z-10">
 
         {/* ── Hero ── */}
-        <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-16">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+        <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-20 pb-10">
+          <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 items-center">
+
+            {/* ── Left: Text Content ── */}
+            <div className="space-y-5 text-center lg:text-left">
+
               {/* Open to work badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 glass rounded-full text-xs font-mono animate-in d1">
                 <span className="relative flex h-2 w-2">
@@ -385,74 +393,128 @@ export default function Portfolio() {
                 </span>
                 <span className="text-green-400">Open to opportunities</span>
               </div>
+
               <p className="text-blue-400 font-mono text-sm animate-in d1">👋 Hello, I'm</p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold animate-in d2">
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold animate-in d2 leading-tight">
                 <span className="gradient-text">Love Sharma</span>
               </h1>
+              
               <div className="animate-in d3">
-                <p className="text-lg sm:text-xl text-gray-400 typing-effect font-mono">
+                <p className="text-base sm:text-lg text-gray-400 font-mono inline-block"
+                  style={{
+                    overflow: "hidden",
+                    whiteSpace: "nowrap",
+                    borderRight: "2px solid #a78bfa",
+                    animation: "typing 3.5s steps(43) 0.5s forwards, blink 0.7s step-end infinite",
+                    width: "0",
+                    maxWidth: "100%",
+                  }}>
                   Full Stack Developer | MERN Stack Developer
                 </p>
               </div>
-              <p className="text-gray-400 max-w-lg animate-in d4">
+
+              <p className="text-gray-400 text-sm sm:text-base max-w-lg mx-auto lg:mx-0 animate-in d4 leading-relaxed">
                 BCA student at MLCNU building full-stack apps with the MERN stack.
                 I care about clean architecture, fast UIs, and shipping things that work.
                 Currently levelling up in System Design and AWS.
               </p>
-              <div className="flex flex-wrap gap-4 animate-in d5">
-                <button onClick={() => scrollTo("projects")}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-medium hover:opacity-90 transition flex items-center gap-2 btn-ripple">
+
+              {/* CTA buttons */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 animate-in d5">
+                <button
+                  onClick={() => scrollTo("projects")}
+                  className="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-medium hover:opacity-90 transition flex items-center gap-2 btn-ripple text-sm"
+                >
                   <Icon name="folder" className="w-4 h-4" /> View Projects
                 </button>
-                <button onClick={() => scrollTo("contact")}
-                  className="px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition flex items-center gap-2 gradient-border btn-ripple">
+                <button
+                  onClick={() => scrollTo("contact")}
+                  className="px-5 py-2.5 glass rounded-lg font-medium hover:bg-white/10 transition flex items-center gap-2 gradient-border btn-ripple text-sm"
+                >
                   <Icon name="mail" className="w-4 h-4" /> Contact Me
                 </button>
-                <a href="/Love_Sharma_Resume.pdf"
+                <a
+                  href="/Love_Sharma_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Love_Sharma_Resume.pdf"
-                  className="px-6 py-3 glass rounded-lg font-medium hover:bg-white/10 transition flex items-center gap-2 btn-ripple"
+                  className="px-5 py-2.5 glass rounded-lg font-medium hover:bg-white/10 transition flex items-center gap-2 btn-ripple text-sm"
                 >
                   <Icon name="download" className="w-4 h-4" /> Resume
                 </a>
               </div>
-              <div className="flex gap-4 animate-in d6">
-                {[["github", "https://github.com"], ["linkedin", "https://linkedin.com"], ["mail", "mailto:love@example.com"]].map(([icon, href]) => (
-                  <a key={icon} href={href} target={icon !== "mail" ? "_blank" : undefined} rel="noopener noreferrer"
-                    className="p-2 glass rounded-lg hover:bg-white/10 transition">
+
+              {/* Social icons */}
+              <div className="flex justify-center lg:justify-start gap-3 animate-in d6">
+                {[
+                  ["github", "https://github.com"],
+                  ["linkedin", "https://linkedin.com"],
+                  ["mail", "mailto:love@example.com"],
+                ].map(([icon, href]) => (
+                  <a
+                    key={icon}
+                    href={href}
+                    target={icon !== "mail" ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="p-2.5 glass rounded-lg hover:bg-white/10 transition"
+                  >
                     <Icon name={icon} className="w-5 h-5" />
                   </a>
                 ))}
               </div>
-              <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 font-mono animate-in d6">
-                <span className="flex items-center gap-1"><Icon name="map-pin" className="w-3 h-3" /> India</span>
-                <span className="flex items-center gap-1"><Icon name="graduation-cap" className="w-3 h-3" /> BCA · 2027</span>
-                <span className="flex items-center gap-1"><Icon name="mail" className="w-3 h-3" /> love.sharma@example.com</span>
+
+              {/* Info line */}
+              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-4 gap-y-2 text-xs text-gray-500 font-mono animate-in d6">
+                <span className="flex items-center gap-1">
+                  <Icon name="map-pin" className="w-3 h-3 flex-shrink-0" /> India
+                </span>
+                <span className="flex items-center gap-1">
+                  <Icon name="graduation-cap" className="w-3 h-3 flex-shrink-0" /> BCA · 2027
+                </span>
+                <span className="flex items-center gap-1 min-w-0">
+                  <Icon name="mail" className="w-3 h-3 flex-shrink-0" />
+                  <span className="truncate">love.sharma@example.com</span>
+                </span>
               </div>
             </div>
 
-            <div className="flex justify-center animate-in d4">
+            {/* ── Right: Photo ── */}
+            <div className="flex justify-center order-first lg:order-last animate-in d4">
               <div className="relative">
-                <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center glow-pulse">
-                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-blue-500/30">
-                    <img src="/photo.jpeg" alt="Love Sharma"
+                {/* Outer glow ring — smaller on mobile */}
+                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center glow-pulse">
+                  {/* Photo */}
+                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-blue-500/30">
+                    <img
+                      src="/photo.jpeg"
+                      alt="Love Sharma"
                       className="w-full h-full object-cover object-top"
-                      onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }} />
-                    <div className="w-full h-full hidden items-center justify-center">
-                      <span className="text-6xl font-bold gradient-text">LS</span>
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        e.target.nextSibling.style.display = "flex";
+                      }}
+                    />
+                    {/* Fallback initials */}
+                    <div className="w-full h-full hidden items-center justify-center bg-gradient-to-br from-blue-600/30 to-purple-600/30">
+                      <span className="text-5xl sm:text-6xl font-bold gradient-text">LS</span>
                     </div>
                   </div>
                 </div>
-                {[
-                  { text: "React.js", color: "text-blue-400", pos: "absolute -top-4 -right-4" },
-                  { text: "Node.js", color: "text-purple-400", pos: "absolute -bottom-2 -left-4" },
-                  { text: "TypeScript", color: "text-pink-400", pos: "absolute top-1/2 -right-8" },
-                ].map(({ text, color, pos }) => (
-                  <div key={text} className={`${pos} px-3 py-1 glass rounded-full text-xs font-mono ${color}`}>{text}</div>
-                ))}
+
+                {/* Floating tech pills — hidden on very small screens */}
+                <div className="hidden sm:block absolute -top-3 -right-2 px-3 py-1 glass rounded-full text-xs font-mono text-blue-400">
+                  React.js
+                </div>
+                <div className="hidden sm:block absolute -bottom-2 -left-2 px-3 py-1 glass rounded-full text-xs font-mono text-purple-400">
+                  Node.js
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-8 px-3 py-1 glass rounded-full text-xs font-mono text-pink-400">
+                  TypeScript
+                </div>
               </div>
             </div>
+
           </div>
         </section>
 
